@@ -10,7 +10,6 @@ pipeline {
              steps {
                     sh 'python3 --version'
                     sh 'docker ps -a'
-                    sh 'nginx --version'
                     sh "curl localhost:80"
                    }
                  }
