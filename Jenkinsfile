@@ -16,7 +16,7 @@ pipeline {
                }
         post {
             always {
-                 sh "docker-compose down -v"
+                 sh "docker compose down -v"
             }
             success {
                  archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
