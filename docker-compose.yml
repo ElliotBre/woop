@@ -1,0 +1,22 @@
+version: "3.8"
+networks:
+  network:
+    driver: bridge
+
+services:
+  app:
+    image: mmbatteries/app
+    build: .
+    deploy:
+      replicas: 3
+
+  nginx:
+    image: nginx:latest
+    ports:
+    - "80:80"
+    volumes:
+      - type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
+volumes:
+  nginxVolume:
