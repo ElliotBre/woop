@@ -7,6 +7,7 @@ services:
   app:
     image: mmbatteries/app
     build: .
+    container_name: mmbatteries/app
     deploy:
       replicas: 3
 
