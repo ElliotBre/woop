@@ -18,16 +18,16 @@ pipeline {
                  }
                }
         post {
-            always {
-                 sh "docker compose down -v"
-            }
             success {
                  sh 'docker login -u ${DOCKER_LOGIN_USR} -p ${DOCKER_LOGIN_PSW}'
-                 sh 'sudo docker push mmbatteries/verycoolapp:latest'
-                
+                 sh 'docker compose push'
+                  
                  sh 'echo success'
 
 
+            }
+            always {
+                 sh 'docker compose down -v'
             }
  
         }
