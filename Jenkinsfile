@@ -1,7 +1,6 @@
 pipeline {
     agent any
     environment{
-        SECRET_VAR = credentials('secret_text')
         DOCKERHUB_CREDENTIALS = credentials('DOCKER_LOGIN')
     }
     stages{
