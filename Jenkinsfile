@@ -23,7 +23,7 @@ pipeline {
             }
             success {
                  sh 'docker login -u ${DOCKER_LOGIN_USR} -p ${DOCKER_LOGIN_PSW}'
-                 sh 'sudo docker push mmbatteries/veryCoolApp:latest'
+                 sh 'sudo docker push mmbatteries/verycoolapp:latest'
                 
                  sh 'echo success'
 

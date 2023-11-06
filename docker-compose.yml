@@ -6,7 +6,7 @@ networks:
 services:
   app:
     build: .
-    image: mmbatteries/veryCoolApp
+    image: mmbatteries/verycoolapp
     ports:
       - "5000"
     deploy:
