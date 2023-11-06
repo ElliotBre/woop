@@ -7,6 +7,8 @@ services:
   app:
     image: mmbatteries/app
     build: .
+    ports:
+      - "5000"
     deploy:
       replicas: 3
 
