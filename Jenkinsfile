@@ -22,6 +22,7 @@ pipeline {
                  sh "docker compose down -v"
             }
             success {
+                 sh 'echo ${DOCKER_LOGIN_USR}'
                  sh 'docker login -u ${DOCKER_LOGIN_USR} -p ${DOCKER_LOGIN_PSW}'
                  sh 'sudo docker push ${DOCKER_LOGIN_USR}/app:latest'
                  sh 'docker logout'
